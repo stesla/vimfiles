@@ -13,8 +13,7 @@ set guioptions-=L "remove left-hand scroll bar
 syntax on
 
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme one
 
 " Map C-t to ctrlp tag lookup
 let g:ctrlp_extensions = ['tag']
@@ -33,6 +32,3 @@ set smartindent
 
 " Set the path
 set path=.,,**
-
-" toggle light/dark
-call togglebg#map("<F5>")
