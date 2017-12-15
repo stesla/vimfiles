@@ -32,3 +32,7 @@ set smartindent
 
 " Set the path
 set path=.,,**
+
+" Set the temp directory
+let vimdir=fnamemodify(expand($MYVIMRC), ":p:h")
+let &directory=vimdir.'/tmp,'.&directory
