@@ -6,10 +6,12 @@ execute pathogen#helptags()
 
 " configure appearance 
 "
+set guioptions-=b "remove bottom scrollbar:
 set guioptions-=e "use console-style tabs in gvim
 set guioptions-=L "remove left-hand scroll bar
 set guioptions-=r "remove right-hand scroll bar
 set guioptions-=T "remove toolbar
+set number
 
 syntax on
 
@@ -26,9 +28,9 @@ filetype plugin indent on
 
 " indent settings
 "
+set expandtab
 set sts=2
 set shiftwidth=2
-set expandtab
 set smartindent
 
 " Set the path
