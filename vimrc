@@ -39,3 +39,9 @@ set path=.,,**
 " Set the temp directory
 let vimdir=fnamemodify(expand($MYVIMRC), ":p:h")
 let &directory=vimdir.'/tmp,'.&directory
+
+" Set the guifont
+set guifont=default
+if has('gui_macvim')
+  set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+endif
