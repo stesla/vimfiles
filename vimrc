@@ -15,6 +15,8 @@ set number
 
 syntax on
 
+au BufNewFile,BufRead *.mush,*.mux setf mush
+
 set background=dark
 colorscheme one
 
