@@ -30,9 +30,11 @@ filetype plugin indent on
 
 " indent settings
 "
+set tabstop=8
 set expandtab
-set sts=2
-set shiftwidth=2
+set softtabstop=4
+set shiftwidth=4
+set shiftround
 set smartindent
 
 " Set the path
