@@ -18,7 +18,7 @@ syntax on
 au BufNewFile,BufRead *.mush,*.mux setf mush
 
 set background=dark
-colorscheme one
+colorscheme apprentice
 
 " Map C-t to ctrlp tag lookup
 let g:ctrlp_extensions = ['tag']
