@@ -23,6 +23,7 @@ colorscheme apprentice
 " Map C-t to ctrlp tag lookup
 let g:ctrlp_extensions = ['tag']
 nmap <silent> <C-t> :CtrlPTag<CR>
+set wildignore+=*/.git*,*/.hg/*,*/.svn/*,*.idea/*,*/.DS_Store/*,*/vendor/*,*/node_modules/*,*/venv/*
 
 " basic settings
 "
@@ -30,10 +31,10 @@ filetype plugin indent on
 
 " indent settings
 "
-set tabstop=8
+set tabstop=4
 set expandtab
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=2
+set shiftwidth=2
 set shiftround
 set smartindent
 
