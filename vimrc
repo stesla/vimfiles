@@ -10,6 +10,7 @@ set guioptions-=L "remove left-hand scroll bar
 set guioptions-=r "remove right-hand scroll bar
 set guioptions-=T "remove toolbar
 set number
+set visualbell
 
 syntax on
 
@@ -49,8 +50,9 @@ set path=.,,**
 let vimdir=fnamemodify(expand($MYVIMRC), ":p:h")
 let &directory=vimdir.'/tmp,'.&directory
 
-" Set the font
+" Set the guifont
 if has("gui_running")
+  set guifont=default
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
