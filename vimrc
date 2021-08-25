@@ -1,11 +1,9 @@
 " load pathogen
-"
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect('bundle/{}')
 execute pathogen#helptags()
 
 " configure appearance 
-"
 set guioptions-=b "remove bottom scrollbar:
 set guioptions-=e "use console-style tabs in gvim
 set guioptions-=L "remove left-hand scroll bar
@@ -26,7 +24,6 @@ nmap <silent> <C-t> :CtrlPTag<CR>
 set wildignore+=*/.git*,*/.hg/*,*/.svn/*,*.idea/*,*/.DS_Store/*,*/vendor/*,*/node_modules/*,*/venv/*
 
 " basic settings
-"
 filetype plugin indent on
 
 " indent settings
@@ -38,6 +35,13 @@ set shiftwidth=2
 set shiftround
 set smartindent
 
+" wordwrap settings
+set wrap
+set linebreak
+set nolist
+set textwidth=0
+set wrapmargin=0
+
 " Set the path
 set path=.,,**
 
@@ -45,8 +49,13 @@ set path=.,,**
 let vimdir=fnamemodify(expand($MYVIMRC), ":p:h")
 let &directory=vimdir.'/tmp,'.&directory
 
-" Set the guifont
-set guifont=default
-if has('gui_macvim')
-  set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+" Set the font
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h14:cANSI
+  endif
 endif
