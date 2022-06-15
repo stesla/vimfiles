@@ -22,7 +22,7 @@ colorscheme apprentice
 " Map C-t to ctrlp tag lookup
 let g:ctrlp_extensions = ['tag']
 nmap <silent> <C-t> :CtrlPTag<CR>
-set wildignore+=*/.git*,*/.hg/*,*/.svn/*,*.idea/*,*/.DS_Store/*,*/vendor/*,*/node_modules/*,*/venv/*
+set wildignore+=*/.git*,*/.hg/*,*/.svn/*,*.idea/*,*/.DS_Store/*,*/node_modules/*,*/venv/*
 
 " basic settings
 filetype plugin indent on
@@ -48,15 +48,16 @@ set path=.,,**
 
 " Set the temp directory
 let vimdir=fnamemodify(expand($MYVIMRC), ":p:h")
-let &directory=vimdir.'/tmp,'.&directory
+let &directory=vimdir.'/tmp//,'.&directory
 
 " Set the guifont
+set guifont=default
 if has("gui_running")
   set guifont=default
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
-    set guifont=Menlo\ Regular:h14
+    set guifont=Menlo\ Regular:h18
   elseif has("gui_win32")
     set guifont=Consolas:h14:cANSI
   endif
