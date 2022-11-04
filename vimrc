@@ -24,6 +24,9 @@ let g:ctrlp_extensions = ['tag']
 nmap <silent> <C-t> :CtrlPTag<CR>
 set wildignore+=*/.git*,*/.hg/*,*/.svn/*,*.idea/*,*/.DS_Store/*,*/node_modules/*,*/venv/*
 
+" NERDTree configure
+let g:NERDTreeWinPos = "right"
+
 " basic settings
 filetype plugin indent on
 
